@@ -7,7 +7,7 @@ from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
 import uvicorn
 
 # Load PDF
-docs = SimpleDirectoryReader("../data").load_data()
+docs = SimpleDirectoryReader("data").load_data()
 index = VectorStoreIndex.from_documents(docs)
 query_engine = index.as_query_engine()
 
